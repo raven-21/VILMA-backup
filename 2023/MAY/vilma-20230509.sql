@@ -9851,7 +9851,8 @@ INSERT INTO `logs` (`id`, `user_id`, `global_id`, `table_name`, `remarks`, `date
 	(9202, 54, 514, 'receipts', 'Delete receipt record of Toyota Avanza White (KFJ-573)undefined', '2023-05-02 02:24:35'),
 	(9203, 87, 1, 'vehicles', 'Update vehicle record of Kymco Super 8 150 Euro3 Blue (0000000)', '2023-05-02 06:56:33'),
 	(9204, 50, 2961, 'joborders', 'Add new job order of Suzuki APV GLX-MT Silver (ULI-796)', '2023-05-08 08:45:30'),
-	(9205, 50, 8124, 'parts', 'Add new part record of Suzuki APV GLX-MT Silver (ULI-796)', '2023-05-08 08:52:36');
+	(9205, 50, 8124, 'parts', 'Add new part record of Suzuki APV GLX-MT Silver (ULI-796)', '2023-05-08 08:52:36'),
+	(9206, 50, 1, 'vehicles', 'Update own vehicle mileage of KTM Duke 200 Orange (LD33610)', '2023-05-09 01:10:18');
 /*!40000 ALTER TABLE `logs` ENABLE KEYS */;
 
 DROP TABLE IF EXISTS `mileages`;

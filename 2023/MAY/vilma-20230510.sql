@@ -886,7 +886,7 @@ CREATE TABLE IF NOT EXISTS `joborders` (
   `datecreated` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `datemodified` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2962 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2965 DEFAULT CHARSET=utf8mb3;
 
 DELETE FROM `joborders`;
 /*!40000 ALTER TABLE `joborders` DISABLE KEYS */;
@@ -3232,7 +3232,10 @@ INSERT INTO `joborders` (`id`, `vehicle_id`, `maintenanceType`, `jobDescription`
 	(2958, 118, 'Repair & Maintenance', 'periodic maintenance', 45154, 'ABB', '2023-02-06', '2023-02-06', 'change oil, filter & rear brake pads', 'Done', NULL, '2023-04-26 02:47:06', '2023-04-26 02:47:06'),
 	(2959, 91, 'Maintenance', 'Lifted Check up', 0, 'Banawe', '2023-04-26', '2023-04-26', 'Kalampag kapag nalulubak', 'Done', NULL, '2023-04-26 08:06:43', '2023-04-26 08:06:43'),
 	(2960, 137, 'Maintenance', 'Towing Fee', 0, 'Janlex Towing Services', '2023-04-27', '2023-04-27', 'Stop Engine', 'Done', NULL, '2023-04-28 08:27:10', '2023-04-28 08:27:10'),
-	(2961, 94, 'Maintenance', 'Battery', 98072, 'Batparts Supply Co', '2023-05-08', '2023-05-08', 'Low battery', 'Done', NULL, '2023-05-08 08:45:29', '2023-05-08 08:45:29');
+	(2961, 94, 'Maintenance', 'Battery', 98072, 'Batparts Supply Co', '2023-05-08', '2023-05-08', 'Low battery', 'Done', NULL, '2023-05-08 08:45:29', '2023-05-08 08:45:29'),
+	(2962, 90, 'Maintenance', 'Set Automotive Jack', 73719, 'Juny', '2023-05-09', '2023-05-09', 'no jack and tire wrench', 'Done', NULL, '2023-05-09 05:34:27', '2023-05-09 05:34:27'),
+	(2963, 91, 'Maintenance', 'Stabilizer Link Right and Left - front', 65291, 'Juny', '2023-05-05', '2023-05-05', 'Stabilizer link was damage, oil leak', 'Done', NULL, '2023-05-09 05:46:19', '2023-05-09 05:46:19'),
+	(2964, 137, 'Maintenance', 'Battery', 0, 'Juny', '2023-04-14', '2023-04-14', 'Low Battery', 'Done', 'Engine power suddenly stopped', '2023-05-10 01:02:53', '2023-05-10 01:02:53');
 /*!40000 ALTER TABLE `joborders` ENABLE KEYS */;
 
 DROP TABLE IF EXISTS `liabilities`;
@@ -3266,7 +3269,7 @@ CREATE TABLE IF NOT EXISTS `logs` (
   `remarks` text,
   `datecreated` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9206 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9214 DEFAULT CHARSET=utf8mb3;
 
 DELETE FROM `logs`;
 /*!40000 ALTER TABLE `logs` DISABLE KEYS */;
@@ -9851,7 +9854,15 @@ INSERT INTO `logs` (`id`, `user_id`, `global_id`, `table_name`, `remarks`, `date
 	(9202, 54, 514, 'receipts', 'Delete receipt record of Toyota Avanza White (KFJ-573)undefined', '2023-05-02 02:24:35'),
 	(9203, 87, 1, 'vehicles', 'Update vehicle record of Kymco Super 8 150 Euro3 Blue (0000000)', '2023-05-02 06:56:33'),
 	(9204, 50, 2961, 'joborders', 'Add new job order of Suzuki APV GLX-MT Silver (ULI-796)', '2023-05-08 08:45:30'),
-	(9205, 50, 8124, 'parts', 'Add new part record of Suzuki APV GLX-MT Silver (ULI-796)', '2023-05-08 08:52:36');
+	(9205, 50, 8124, 'parts', 'Add new part record of Suzuki APV GLX-MT Silver (ULI-796)', '2023-05-08 08:52:36'),
+	(9206, 50, 1, 'vehicles', 'Update own vehicle mileage of KTM Duke 200 Orange (LD33610)', '2023-05-09 01:10:18'),
+	(9207, 50, 534, 'receipts', 'Add new receipt record of Volkswagen Touareg Oryx White (ABG-7091)', '2023-05-09 03:01:22'),
+	(9208, 50, 2962, 'joborders', 'Add new job order of KIA Sorento White (UIU-244)', '2023-05-09 05:34:28'),
+	(9209, 50, 8125, 'parts', 'Add new part record of KIA Sorento White (UIU-244)', '2023-05-09 05:35:17'),
+	(9210, 50, 2963, 'joborders', 'Add new job order of Lexus RX 350 White Pearl Crystal (AAO-3102)', '2023-05-09 05:46:19'),
+	(9211, 50, 8126, 'parts', 'Add new part record of Lexus RX 350 White Pearl Crystal (AAO-3102)', '2023-05-09 05:51:02'),
+	(9212, 50, 2964, 'joborders', 'Add new job order of Volvo XC90 Brown (UIK 862)', '2023-05-10 01:02:54'),
+	(9213, 50, 8127, 'parts', 'Add new part record of Volvo XC90 Brown (UIK 862)', '2023-05-10 01:03:51');
 /*!40000 ALTER TABLE `logs` ENABLE KEYS */;
 
 DROP TABLE IF EXISTS `mileages`;
@@ -10161,7 +10172,7 @@ CREATE TABLE IF NOT EXISTS `partsused` (
   `datecreated` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `dateModified` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8125 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8128 DEFAULT CHARSET=utf8mb3;
 
 DELETE FROM `partsused`;
 /*!40000 ALTER TABLE `partsused` DISABLE KEYS */;
@@ -16259,7 +16270,10 @@ INSERT INTO `partsused` (`id`, `joborder_id`, `vendor_id`, `datePurchase`, `unit
 	(8121, 2958, 80, '2023-02-04', 'set', NULL, 'brake pad', 1, 6200.00, 6200.00, '2023-04-26 02:48:35', '2023-04-26 02:48:35'),
 	(8122, 2958, 29, '2023-02-06', 'liters', NULL, 'castrol magnetic 10w-40 part synthetic', 9, 590.00, 5310.00, '2023-04-26 02:49:54', '2023-04-26 02:49:54'),
 	(8123, 2959, 0, '2023-04-26', NULL, NULL, 'Under Chassis Check up - Lifted', 1, 1500.00, 1500.00, '2023-04-26 08:07:29', '2023-04-26 08:07:29'),
-	(8124, 2961, 0, '2023-05-08', NULL, NULL, 'NS60 Motolite Excel MF', 1, 6808.00, 6808.00, '2023-05-08 08:52:35', '2023-05-08 08:52:35');
+	(8124, 2961, 0, '2023-05-08', NULL, NULL, 'NS60 Motolite Excel MF', 1, 6808.00, 6808.00, '2023-05-08 08:52:35', '2023-05-08 08:52:35'),
+	(8125, 2962, 0, '2023-05-09', NULL, NULL, 'Automotive Jack Set', 1, 2800.00, 2800.00, '2023-05-09 05:35:16', '2023-05-09 05:35:16'),
+	(8126, 2963, 0, '2023-05-05', NULL, NULL, 'Stabilizer Link Left and Right', 2, 5500.00, 11000.00, '2023-05-09 05:51:01', '2023-05-09 05:51:01'),
+	(8127, 2964, 0, '2023-04-14', NULL, NULL, 'Motolite Gold', 1, 10800.00, 10800.00, '2023-05-10 01:03:51', '2023-05-10 01:03:51');
 /*!40000 ALTER TABLE `partsused` ENABLE KEYS */;
 
 DROP TABLE IF EXISTS `pmnotifications`;
@@ -16352,7 +16366,7 @@ CREATE TABLE IF NOT EXISTS `receipts` (
   `totalAmount` double(10,2) DEFAULT NULL,
   `remarks` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=534 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=535 DEFAULT CHARSET=utf8mb3;
 
 DELETE FROM `receipts`;
 /*!40000 ALTER TABLE `receipts` DISABLE KEYS */;
@@ -16871,7 +16885,8 @@ INSERT INTO `receipts` (`id`, `vehicle_id`, `fieldOffice`, `orNo`, `dateOr`, `da
 	(530, 83, 'Manila East District Office', '1340-000000110768', '2023-04-14', '2024-04-12', 'Norminring Development Corp', '1340', 'Camus and Gen Luna St. Downtown', 2450.00, NULL),
 	(531, 117, 'Manila East District Office', '1340-000000110930', '2023-04-14', '2024-04-12', 'Juan Andre Resurreccion Lacson', '1340', '6/F Manila Teachers Bldg 918 UN Ave Ermita', 2310.00, NULL),
 	(532, 64, 'Manila East District Office', '1340-000000110931', '2023-04-14', '2024-04-12', 'Juan Andre R Lacson', '1340', '6/F Manila Teachers Bldg 918 UN Ave Ermita', 3610.00, NULL),
-	(533, 142, 'Manila East District Office', '1340-000000110929', '2023-04-14', '2024-04-12', 'Jordan Briones', '1340', '918 United Nations Ave Paco', 257.50, NULL);
+	(533, 142, 'Manila East District Office', '1340-000000110929', '2023-04-14', '2024-04-12', 'Jordan Briones', '1340', '918 United Nations Ave Paco', 257.50, NULL),
+	(534, 95, 'Muntinlupa District Office', '1366000000216781', '2023-01-23', '2024-01-23', 'Juan Andre Terence Lacson', '1366', '90 T Bautista St., Afpovai ph2 Upper bicutan Taguig', 2395.00, NULL);
 /*!40000 ALTER TABLE `receipts` ENABLE KEYS */;
 
 DROP TABLE IF EXISTS `roles`;
@@ -17719,7 +17734,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `role_id`, `employee_id`, `group_id`, `username`, `password`, `contactNo`, `email`, `status`, `lastLogin`, `datecreated`) VALUES
-	(1, 2, 1, NULL, 'developer', '6f35f480575e1dc27e5b6ec464aad8b4', NULL, NULL, 'Active', '2023-04-24 11:34:06', '2019-10-01 11:05:37'),
+	(1, 2, 1, NULL, 'developer', '6f35f480575e1dc27e5b6ec464aad8b4', NULL, NULL, 'Active', '2023-05-09 11:54:07', '2019-10-01 11:05:37'),
 	(9, 1, 42, NULL, 'juanandre.lacson', 'b8430128676d467023d0261e4ab7e95e', '639350537056', 'shindy.morisamaaraofficial@gmail.com,rma090586@gmail.com', 'Active', '2021-07-11', '2019-10-01 11:05:37'),
 	(11, 5, 50, 1, 'ronmichael.alonzo', 'a1eff01a6862aea0d5237eb513a378d3', '639770887364', 'rma090586@gmail.com', 'Active', '2023-05-08 09:44:46', '2019-10-01 11:05:37'),
 	(14, 5, 54, 2, 'christine.villamor', 'dffc994d83ba2d18ce669d3fc622130a', '63null', '-', 'Disabled', '2019-10-28 13:05:08', '2019-10-01 11:05:37'),
@@ -17907,8 +17922,8 @@ INSERT INTO `vehicles` (`id`, `brand_id`, `model_id`, `type_id`, `department_id`
 	(87, 1, 5, 8, 5, 3, 14, 1, 50, 1, 5, NULL, NULL, NULL, 'PQD-376', 'Freedom White', NULL, '', '', '', 0.00, '2022-12-28', 150024, '2019-01-08 06:10:51', '2023-01-03 01:12:10'),
 	(88, 1, 1, 4, 5, 3, 14, 1, 50, 1, 2, NULL, NULL, 'http://res.cloudinary.com/smsivilma/image/upload/v1564620619/vehicles/88.jpg', 'NAQ-715', 'Blaze', NULL, '', '', '', 0.00, '2020-06-30', 172030, '2019-01-08 07:03:59', '2020-07-08 16:57:23'),
 	(89, 5, 15, 5, 5, 3, 17, 1, 0, 1, 2, NULL, NULL, NULL, 'AAN-4398', 'Brown Metal', '2014-05-23', '', '', '', 0.00, '2021-04-20', 80100, '2019-01-08 07:35:21', '2021-07-01 13:14:08'),
-	(90, 6, 48, 4, 5, 3, 17, 1, 50, 1, 5, NULL, NULL, NULL, 'UIU-244', 'White', NULL, '', '', '', 0.00, '2022-12-22', 69260, '2019-01-08 09:00:32', '2022-12-23 08:51:09'),
-	(91, 23, 49, 5, 5, 3, 17, 1, 58, 1, 5, NULL, NULL, NULL, 'AAO-3102', 'White Pearl Crystal', NULL, '', '', '', 0.00, '2023-04-26', 0, '2019-01-09 02:42:28', '2023-04-26 08:06:42'),
+	(90, 6, 48, 4, 5, 3, 17, 1, 50, 1, 5, NULL, NULL, NULL, 'UIU-244', 'White', NULL, '', '', '', 0.00, '2023-05-09', 73719, '2019-01-08 09:00:32', '2023-05-09 05:34:26'),
+	(91, 23, 49, 5, 5, 3, 17, 1, 58, 1, 5, NULL, NULL, NULL, 'AAO-3102', 'White Pearl Crystal', NULL, '', '', '', 0.00, '2023-05-05', 65291, '2019-01-09 02:42:28', '2023-05-09 05:46:18'),
 	(92, 1, 51, 5, 5, 3, 17, 1, 42, 1, 5, NULL, NULL, 'http://res.cloudinary.com/smsivilma/image/upload/v1565061753/vehicles/92.jpg', 'AIA-1177', 'Silver', NULL, '', '', '', 0.00, '2022-09-16', 0, '2019-01-09 03:13:32', '2022-09-15 02:05:11'),
 	(93, 24, 52, 14, 5, 3, 17, 1, 42, 1, 2, NULL, NULL, 'http://res.cloudinary.com/smsivilma/image/upload/v1565061643/vehicles/93.jpg', 'WUI-955', 'White', NULL, '', '', '', 0.00, '2022-02-03', 0, '2019-01-09 03:28:05', '2022-05-13 11:17:52'),
 	(94, 11, 53, 14, 5, 3, 17, 1, 50, 1, 5, NULL, NULL, 'http://res.cloudinary.com/smsivilma/image/upload/v1564714234/vehicles/94.jpg', 'ULI-796', 'Silver', NULL, '', '', '', 0.00, '2023-05-08', 98072, '2019-01-09 05:58:59', '2023-05-08 08:45:28'),
